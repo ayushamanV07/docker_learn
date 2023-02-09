@@ -1,0 +1,24 @@
+What is Image:
+	Image is the source file to create a running instance(container) of our environmnet
+	It consists for source environment and the startup command which will fire once the container is setup
+
+
+	Ex: docker run <image name>
+	    it will create a running container for this image
+
+
+  Overriding default command of image:
+	if we want to overwrite the startup commands specified in image the we can pass it along with the command
+	
+	Ex: docker run <image name> <default cmd override>
+ 
+        it a override, so the commands specified inside the image will not execute
+	
+
+
+  Listing all runnning containers:
+	
+	Ex: docker ps (it gives the list of all running containers)
+ 
+	to get details of all the containers ever created on our machine we use
+		Ex: docker ps --all
