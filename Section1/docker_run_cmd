@@ -22,3 +22,25 @@ What is Image:
  
 	to get details of all the containers ever created on our machine we use
 		Ex: docker ps --all
+
+
+
+
+
+Breakdown of docker run cmd:
+	docker run command is actually the combination of docker creat and docker start
+	docker create will create the container and docker start will start it with startup commands of image
+
+	docker run <image name> = docker create <image name> + docker start <container-id>
+
+
+	in docker strat:
+		if we do docker start -a <container-id> then it will show the output of the starting commands on your cli
+
+		if we do only docker start <container-id> it will not show the output on cli
+
+		by default we use docker run <image name> then it uses -a argument at the time of start
+
+Cleaing the unused containers,images,networks etc:
+	the command is
+	docker system prune
