@@ -44,3 +44,33 @@ Breakdown of docker run cmd:
 Cleaing the unused containers,images,networks etc:
 	the command is
 	docker system prune
+
+
+docker logs:
+	docker logs <container id>
+
+	if you start docker container without -a and still wants to see the things happened then we can use docker logs
+
+
+Stopping container:
+
+	stop a container: docker stop <container id>
+
+	kill a container: docker kill <container id>
+
+	when we use docker stop then it uses the termination signal to stop the runnning process inside container but it gives 
+	time to process to stop or to do some clean up
+	whereas docker kill commands will kill the container right now , not get to do any additional work
+
+docker_exec:
+	docker exec -it <container id> <command> 
+	it will give us an interactive cli inside that container
+
+	accessing terminal:
+		 docker exec -it <container id> sh
+		 docker exec -it <container id> bash
+		 docker exec -it <container id> /bin/bash
+
+
+	we can also have iteractive terminal at time of running an image
+		docker run -it <image name> sh
